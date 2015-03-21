@@ -46,6 +46,14 @@
 #     "Helping"
 #   end
 # end
+activate :directory_indexes
+activate :blog do |blog|
+  blog.permalink = ":title"
+  blog.sources = "posts/:year-:month-:day-:title"
+  blog.layout = "post_layout"
+  # blog.tag_template = "tag.html"
+  # blog.calendar_template = "calendar.html"
+end
 
 set :css_dir, 'stylesheets'
 
